@@ -1,0 +1,21 @@
+DROP TABLE IF EXISTS Book_genres;
+
+DROP TABLE IF EXISTS Books_at_warehouse;
+
+DROP TABLE IF EXISTS Books_in_order;
+
+DROP TABLE IF EXISTS Books_in_supply;
+
+DROP TABLE IF EXISTS Orders;
+
+DROP TABLE IF EXISTS Staff;
+
+DROP TABLE IF EXISTS Supplies;
+
+DROP TABLE IF EXISTS Suppliers;
+
+DROP TABLE IF EXISTS Books;
+
+DROP TABLE IF EXISTS Warehouses;
+
+DROP TABLE IF EXISTS Customers;
