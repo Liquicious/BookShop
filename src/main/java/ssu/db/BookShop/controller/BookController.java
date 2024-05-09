@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import ssu.db.BookShop.entity.Book;
 import ssu.db.BookShop.repository.BookRepository;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 public class BookController {
@@ -17,13 +19,13 @@ public class BookController {
     private final BookRepository bookRepository;
 
     @PermitAll
-    @GetMapping("/book")
-    void getBooks() {
-        bookRepository.findAll();
+    @GetMapping("/getBooks")
+    List<Book> getBooks() {
+        return bookRepository.findAll();
     }
 
     @Secured("ROLE_ADMIN")
-    @PostMapping("/book")
+    @PostMapping("/addBook")
     void createBook(@RequestBody Book book) {
         bookRepository.save(book);
     }
