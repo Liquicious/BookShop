@@ -24,7 +24,7 @@ public class BookController {
         return bookRepository.findAll();
     }
 
-    @Secured("ROLE_ADMIN")
+    @PermitAll
     @PostMapping("/addBook")
     void createBook(@RequestBody Book book) {
         bookRepository.save(book);
