@@ -4,7 +4,7 @@ import jakarta.annotation.security.PermitAll;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
-import ssu.db.BookShop.entity.Book;
+import ssu.db.BookShop.dto.BookDTO;
 import ssu.db.BookShop.service.BookService;
 
 import java.util.List;
@@ -18,13 +18,13 @@ public class BookController {
 
     @PermitAll
     @GetMapping("/getAll")
-    List<Book> getAllBooks() {
+    List<BookDTO> getAllBooks() {
         return bookService.getAllBooks();
     }
 
     @Secured("ROLE_ADMIN")
     @PostMapping("/create")
-    void createBook(@RequestBody Book book) {
+    void createBook(@RequestBody BookDTO book) {
         bookService.createBook(book);
     }
 }

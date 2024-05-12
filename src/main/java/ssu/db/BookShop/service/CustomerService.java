@@ -1,12 +1,12 @@
 package ssu.db.BookShop.service;
 
-import ssu.db.BookShop.entity.Customer;
+import ssu.db.BookShop.dto.CustomerDTO;
 
 import java.util.List;
 
 public interface CustomerService {
 
-    List<Customer> getAllCustomers();
+    List<CustomerDTO> getAllCustomers();
 
-    void createCustomer(Customer customer);
+    void createCustomer(CustomerDTO customer);
 }

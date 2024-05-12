@@ -3,7 +3,7 @@ package ssu.db.BookShop.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
-import ssu.db.BookShop.entity.Customer;
+import ssu.db.BookShop.dto.CustomerDTO;
 import ssu.db.BookShop.service.CustomerService;
 
 import java.util.List;
@@ -17,13 +17,13 @@ public class CustomerController {
 
     @Secured("ROLE_ADMIN")
     @GetMapping("/getAll")
-    public List<Customer> getAllCustomers() {
+    public List<CustomerDTO> getAllCustomers() {
         return customerService.getAllCustomers();
     }
 
     @Secured("ROLE_ADMIN")
     @PostMapping("/create")
-    public void createCustomer(@RequestBody Customer customer) {
+    public void createCustomer(@RequestBody CustomerDTO customer) {
         customerService.createCustomer(customer);
     }
 }

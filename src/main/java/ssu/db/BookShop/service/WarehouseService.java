@@ -1,12 +1,14 @@
 package ssu.db.BookShop.service;
 
-import ssu.db.BookShop.entity.Warehouse;
+import ssu.db.BookShop.dto.WarehouseDTO;
 
 import java.util.List;
 
 public interface WarehouseService {
 
-    List<Warehouse> getAllWarehouses();
+    List<WarehouseDTO> getAllWarehouses();
 
-    void createWarehouse(Warehouse warehouse);
+    void createWarehouse(WarehouseDTO warehouse);
+
+    WarehouseDTO getWarehouseById(int id);
 }

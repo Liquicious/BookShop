@@ -1,12 +1,12 @@
 package ssu.db.BookShop.service;
 
-import ssu.db.BookShop.entity.Book;
+import ssu.db.BookShop.dto.BookDTO;
 
 import java.util.List;
 
 public interface BookService {
 
-    List<Book> getAllBooks();
+    List<BookDTO> getAllBooks();
 
-    void createBook(Book book);
+    void createBook(BookDTO book);
 }
