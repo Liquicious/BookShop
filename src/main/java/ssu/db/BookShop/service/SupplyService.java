@@ -9,4 +9,6 @@ public interface SupplyService {
     List<SupplyDTO> getAllSupplies();
 
     void createSupply(SupplyDTO supplyDTO);
+
+    SupplyDTO getSupplyById(int id);
 }

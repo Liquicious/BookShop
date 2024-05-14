@@ -3,27 +3,27 @@ package ssu.db.BookShop.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
-import ssu.db.BookShop.dto.SupplyDTO;
-import ssu.db.BookShop.service.SupplyService;
+import ssu.db.BookShop.dto.OrderDTO;
+import ssu.db.BookShop.service.OrderService;
 
 import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/supply")
-public class SupplyController {
+@RequestMapping("/order")
+public class OrderController {
 
-    private final SupplyService supplyService;
+    private final OrderService orderService;
 
     @Secured("ROLE_ADMIN")
     @GetMapping("/getAll")
-    public List<SupplyDTO> getAll() {
-        return supplyService.getAllSupplies();
+    public List<OrderDTO> getAllOrders() {
+        return orderService.getAllOrders();
     }
 
     @Secured("ROLE_ADMIN")
     @PostMapping("/create")
-    public void createSupply(@RequestBody SupplyDTO supply) {
-        supplyService.createSupply(supply);
+    public void createOrder(@RequestBody OrderDTO order) {
+        orderService.createOrder(order);
     }
 }

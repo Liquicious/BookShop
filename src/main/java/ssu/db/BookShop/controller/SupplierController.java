@@ -23,7 +23,7 @@ public class SupplierController {
 
     @Secured("ROLE_ADMIN")
     @PostMapping("/create")
-    public void create(@RequestBody SupplierDTO supplier) {
+    public void createSupplier(@RequestBody SupplierDTO supplier) {
         supplierService.createSupplier(supplier);
     }
 }

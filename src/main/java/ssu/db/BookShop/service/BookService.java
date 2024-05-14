@@ -8,5 +8,7 @@ public interface BookService {
 
     List<BookDTO> getAllBooks();
 
-    void createBook(BookDTO book);
+    void createBook(BookDTO bookDTO);
+
+    BookDTO getBookById(int id);
 }

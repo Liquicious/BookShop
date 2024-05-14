@@ -8,5 +8,7 @@ public interface CustomerService {
 
     List<CustomerDTO> getAllCustomers();
 
-    void createCustomer(CustomerDTO customer);
+    void createCustomer(CustomerDTO customerDTO);
+
+    CustomerDTO getCustomerById(int id);
 }

@@ -32,4 +32,9 @@ public class BookServiceImpl implements BookService {
         Book book = bookMapper.bookDTOToBook(bookDTO);
         bookRepository.save(book);
     }
+
+    @Override
+    public BookDTO getBookById(int id) {
+        return bookMapper.bookToBookDTO(bookRepository.findById(id).get());
+    }
 }

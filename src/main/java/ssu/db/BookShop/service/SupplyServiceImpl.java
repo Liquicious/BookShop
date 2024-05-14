@@ -32,4 +32,9 @@ public class SupplyServiceImpl implements SupplyService {
         Supply supply = supplyMapper.supplyDTOToSupply(supplyDTO);
         supplyRepository.save(supply);
     }
+
+    @Override
+    public SupplyDTO getSupplyById(int id) {
+        return supplyMapper.supplyToSupplyDTO(supplyRepository.findById(id).get());
+    }
 }

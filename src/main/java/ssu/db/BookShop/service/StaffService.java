@@ -8,5 +8,5 @@ public interface StaffService {
 
     List<StaffDTO> getAllStaff();
 
-    void createStaff(StaffDTO staff);
+    void createStaff(StaffDTO staffDTO);
 }

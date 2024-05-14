@@ -8,7 +8,7 @@ public interface SupplierService {
 
     List<SupplierDTO> getAllSuppliers();
 
-    void createSupplier(SupplierDTO supplier);
+    void createSupplier(SupplierDTO supplierDTO);
 
     SupplierDTO getSupplierById(int id);
 }

@@ -8,7 +8,7 @@ public interface WarehouseService {
 
     List<WarehouseDTO> getAllWarehouses();
 
-    void createWarehouse(WarehouseDTO warehouse);
+    void createWarehouse(WarehouseDTO warehouseDTO);
 
     WarehouseDTO getWarehouseById(int id);
 }
