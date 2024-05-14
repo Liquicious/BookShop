@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.Instant;
+import java.util.List;
 
 @Getter
 @Setter
@@ -14,4 +15,5 @@ public class OrderDTO {
     private Double orderCost;
     private Integer idCustomer;
     private Integer idWarehouse;
+    private List<BooksInOrderDTO> booksInOrders;
 }

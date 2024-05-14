@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.Instant;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -29,5 +31,8 @@ public class Order {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "id_warehouse", nullable = false)
     private Warehouse idWarehouse;
+
+    @OneToMany(mappedBy = "idOrder", cascade = CascadeType.ALL)
+    private Set<BooksInOrder> booksInOrders = new LinkedHashSet<>();
 
 }
