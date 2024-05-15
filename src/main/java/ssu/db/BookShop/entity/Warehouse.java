@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 @Getter
 @Setter
 @Entity
@@ -16,5 +19,11 @@ public class Warehouse {
 
     @Column(name = "adress_warehouse", nullable = false, length = 100)
     private String adressWarehouse;
+
+    @OneToMany(mappedBy = "idWarehouse", cascade = CascadeType.ALL)
+    private Set<BooksAtWarehouse> booksAtWarehouses = new LinkedHashSet<>();
+
+    @OneToMany(mappedBy = "idWarehouse", cascade = CascadeType.ALL)
+    private Set<Staff> staff = new LinkedHashSet<>();
 
 }

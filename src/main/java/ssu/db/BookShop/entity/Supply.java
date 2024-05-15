@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -26,5 +28,8 @@ public class Supply {
 
     @Column(name = "date_of_delivery", nullable = false)
     private LocalDate dateOfDelivery;
+
+    @OneToMany(mappedBy = "idSupply", cascade = CascadeType.ALL)
+    private Set<BooksInSupply> booksInSupplies = new LinkedHashSet<>();
 
 }
