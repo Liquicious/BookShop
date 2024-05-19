@@ -1,6 +1,9 @@
 package ssu.db.BookShop.service;
 
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import ssu.db.BookShop.dto.BookDTO;
 import ssu.db.BookShop.dto.BookMapper;
